@@ -40,12 +40,12 @@
             this.comboOperacionCalculadora = new System.Windows.Forms.ComboBox();
             this.txtNumero1Calculadora = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtNumeroConversor = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.lblResultadoConversor = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNumeroConversor = new System.Windows.Forms.TextBox();
+            this.comboConversor = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -139,7 +139,6 @@
             this.txtNumero2Calculadora.Name = "txtNumero2Calculadora";
             this.txtNumero2Calculadora.Size = new System.Drawing.Size(100, 20);
             this.txtNumero2Calculadora.TabIndex = 2;
-            this.txtNumero2Calculadora.TextChanged += new System.EventHandler(this.txtNumero2Calculadora_TextChanged);
             this.txtNumero2Calculadora.MouseLeave += new System.EventHandler(this.txtNumero2Calculadora_MouseLeave);
             // 
             // comboOperacionCalculadora
@@ -156,10 +155,7 @@
             this.comboOperacionCalculadora.Name = "comboOperacionCalculadora";
             this.comboOperacionCalculadora.Size = new System.Drawing.Size(121, 21);
             this.comboOperacionCalculadora.TabIndex = 0;
-            this.comboOperacionCalculadora.TextUpdate += new System.EventHandler(this.comboOperacionCalculadora_TextUpdate);
             this.comboOperacionCalculadora.DropDownClosed += new System.EventHandler(this.comboOperacionCalculadora_DropDownClosed);
-            this.comboOperacionCalculadora.Click += new System.EventHandler(this.comboOperacionCalculadora_Click);
-            this.comboOperacionCalculadora.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboOperacionCalculadora_MouseClick);
             // 
             // txtNumero1Calculadora
             // 
@@ -175,7 +171,7 @@
             this.tabPage2.Controls.Add(this.lblResultadoConversor);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.txtNumeroConversor);
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.comboConversor);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -186,45 +182,13 @@
             this.tabPage2.Text = "Convertidor";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblResultadoConversor
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "A";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(304, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Resultado";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Binario A Decimal",
-            "Binario A Hexadecimal",
-            "Decimal A Binario",
-            "Decimal A Hexadecimal",
-            "Hexadecimal A Binario",
-            "Hexadecimal A Decimal"});
-            this.comboBox1.Location = new System.Drawing.Point(135, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // txtNumeroConversor
-            // 
-            this.txtNumeroConversor.Location = new System.Drawing.Point(17, 51);
-            this.txtNumeroConversor.Name = "txtNumeroConversor";
-            this.txtNumeroConversor.Size = new System.Drawing.Size(100, 20);
-            this.txtNumeroConversor.TabIndex = 3;
+            this.lblResultadoConversor.AutoSize = true;
+            this.lblResultadoConversor.Location = new System.Drawing.Point(307, 58);
+            this.lblResultadoConversor.Name = "lblResultadoConversor";
+            this.lblResultadoConversor.Size = new System.Drawing.Size(0, 13);
+            this.lblResultadoConversor.TabIndex = 5;
             // 
             // label8
             // 
@@ -235,13 +199,45 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Tipo de Conversion";
             // 
-            // lblResultadoConversor
+            // txtNumeroConversor
             // 
-            this.lblResultadoConversor.AutoSize = true;
-            this.lblResultadoConversor.Location = new System.Drawing.Point(307, 58);
-            this.lblResultadoConversor.Name = "lblResultadoConversor";
-            this.lblResultadoConversor.Size = new System.Drawing.Size(0, 13);
-            this.lblResultadoConversor.TabIndex = 5;
+            this.txtNumeroConversor.Location = new System.Drawing.Point(17, 51);
+            this.txtNumeroConversor.Name = "txtNumeroConversor";
+            this.txtNumeroConversor.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeroConversor.TabIndex = 3;
+            // 
+            // comboConversor
+            // 
+            this.comboConversor.FormattingEnabled = true;
+            this.comboConversor.Items.AddRange(new object[] {
+            "Binario A Decimal",
+            "Binario A Hexadecimal",
+            "Decimal A Binario",
+            "Decimal A Hexadecimal",
+            "Hexadecimal A Binario",
+            "Hexadecimal A Decimal"});
+            this.comboConversor.Location = new System.Drawing.Point(135, 51);
+            this.comboConversor.Name = "comboConversor";
+            this.comboConversor.Size = new System.Drawing.Size(121, 21);
+            this.comboConversor.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(304, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Resultado";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(57, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "A";
             // 
             // Form1
             // 
@@ -277,7 +273,7 @@
         private System.Windows.Forms.Label lblResultadoConversor;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNumeroConversor;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboConversor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
     }

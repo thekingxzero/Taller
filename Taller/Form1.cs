@@ -77,21 +77,6 @@ namespace Taller
 
         }
 
-        private void comboOperacionCalculadora_TextUpdate(object sender, EventArgs e)
-        {
-          //  Calcular();
-        }
-
-        private void comboOperacionCalculadora_MouseClick(object sender, MouseEventArgs e)
-        {
-          //  Calcular();
-        }
-
-        private void comboOperacionCalculadora_Click(object sender, EventArgs e)
-        {
-         //   Calcular();
-        }
-
         private void comboOperacionCalculadora_DropDownClosed(object sender, EventArgs e)
         {
             Calcular();
@@ -116,7 +101,7 @@ namespace Taller
                 case 0:
                     
                     break;
+            }
         }
-    }
     }
 }
